@@ -18,7 +18,7 @@ function getCharacters() {
 
 function fetchCharacter(id) {
     // url for character with a specific id
-    const URL = `http://gateway.marvel.com/v1/public/characters/${id}?ts=${timeStamp}&apikey=${PUBLIC_KEY}&hash=${md5(
+    const URL = `https://gateway.marvel.com/v1/public/characters/${id}?ts=${timeStamp}&apikey=${PUBLIC_KEY}&hash=${md5(
         timeStamp + PRIVATE_KEY + PUBLIC_KEY
     )}`;
 

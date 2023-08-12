@@ -5,7 +5,7 @@ const PRIVATE_KEY = "af44953c65333ab0d6912f8c46583a20a4a370d6";
 // timestamp
 const timeStamp = Date.now();
 //URL to get characters, max limit is 100
-const URL = `http://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${PUBLIC_KEY}&hash=${md5(
+const URL = `https://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${PUBLIC_KEY}&hash=${md5(
     timeStamp + PRIVATE_KEY + PUBLIC_KEY
 )}&limit=100`;
 // var heroes;
@@ -27,7 +27,7 @@ var searchTimer = setInterval(() => {
 
     //call api for search
     fetch(
-        `http://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${PUBLIC_KEY}&hash=${md5(
+        `https://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${PUBLIC_KEY}&hash=${md5(
             timeStamp + PRIVATE_KEY + PUBLIC_KEY
         )}&limit=100&nameStartsWith=${searchText}`
     )
